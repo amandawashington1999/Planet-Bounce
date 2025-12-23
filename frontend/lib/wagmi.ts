@@ -1,10 +1,13 @@
-import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { createConfig, http } from "wagmi";
 import { sepolia } from "wagmi/chains";
+import { injected } from "wagmi/connectors";
 
-export const config = getDefaultConfig({
-  appName: "Planet Bounce",
-  projectId: "b5e4e3c5e9e7e4e3c5e9e7e4e3c5e9e7",
+export const config = createConfig({
   chains: [sepolia],
+  connectors: [injected()],
+  transports: {
+    [sepolia.id]: http(),
+  },
   ssr: true,
 });
 
@@ -40,4 +43,3 @@ export const PLANETS = [
   { id: 6, name: "Uranus", emoji: "⛢", color: "#D1E7E7" },
   { id: 7, name: "Neptune", emoji: "♆", color: "#5B5DDF" },
 ] as const;
-
