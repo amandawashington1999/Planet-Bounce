@@ -3,7 +3,7 @@ import { sepolia } from "wagmi/chains";
 
 export const config = getDefaultConfig({
   appName: "Planet Bounce",
-  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "00000000000000000000000000000000",
+  projectId: "b5e4e3c5e9e7e4e3c5e9e7e4e3c5e9e7",
   chains: [sepolia],
   ssr: true,
 });

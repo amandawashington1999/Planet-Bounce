@@ -1,5 +1,6 @@
 # Sensitive config files
 sat.txt
+ui.xml
 
 # Dependencies
 node_modules/
